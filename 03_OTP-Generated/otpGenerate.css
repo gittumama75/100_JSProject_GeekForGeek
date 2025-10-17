@@ -1,0 +1,22 @@
+body {
+    background-color: black;
+    color: white;
+}
+.otp-box-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.otp-box-list {
+    display: flex;
+}
+.otp-box-list .otp-box {
+    width: 25px;
+    margin: 3px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-size: 22px;
+}
