@@ -20,3 +20,15 @@ body {
     text-align: center;
     font-size: 22px;
 }
+.otp-validate-message {
+    border-radius: 5px;
+    padding: 4px;
+}
+.otp-validate-message.success {
+    border: 1px solid greenyellow;
+    color: green;
+}
+.otp-validate-message.fail {
+    border: 1px solid greenyellow;
+    color: red;
+}
