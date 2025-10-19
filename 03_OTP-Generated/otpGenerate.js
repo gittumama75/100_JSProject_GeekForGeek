@@ -1,5 +1,4 @@
 let generatedOTP;
-const otpExpiresElem = document.getElementById("otp-expires-id");
 
 //  Function for the tackle OTP boxes
 function tackleOTPBoxes() {
@@ -68,6 +67,7 @@ function expireOTP() {
     const totalTime = 15000; // 15 seconds
     const interval = 1000;
     let slice = totalTime / interval;
+    const otpExpiresElem = document.getElementById("otp-expires-id");
 
     const intvId = setInterval(function () {
         otpExpiresElem.innerText = `OTP will expire in ${slice} seconds.`;
