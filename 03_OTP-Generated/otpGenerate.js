@@ -54,6 +54,18 @@ function validateOTP() {
             document.getElementById("result-id").innerText = `✅ OTP has been validated successfully`;
             resultElem.classList.remove("fail");
             resultElem.classList.add("success");
+            
+            // ✅ Stop expiration countdown
+            clearInterval(intvId);
+            clearTimeout(timeoutId);
+            otpExpiresElem.innerText = "🎉 OTP validated before expiration!";
+
+            // ✅ Disable all boxes so user can't delete or change OTP
+            const otpBoxes = document.querySelectorAll(".otp-box");
+            otpBoxes.forEach((box) => {
+                box.disabled = true;
+                box.classList.add("disabled-box");
+            });
         } else {
             document.getElementById("result-id").innerText = `❌ OTP is not valid`;
             resultElem.classList.remove("success");
